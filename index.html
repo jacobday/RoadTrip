@@ -42,20 +42,14 @@ var x = setInterval(function() {
   var days = Math.floor(distance / (1000 * 60 * 60 * 24));
     
   // Output the result in an element with id="demo"
-  if (distance > 1) {
+  if (distance < 0) {
   document.getElementById("countdown").innerHTML = days + " days left";
   }
-  else if (distance < 0) {
-    document.getElementById("countdown").innerHTML = "In progress. Ends Apr 28, 2019.";
-  }
-  else if (distance > 10) {
-    document.getElementById("countdown").innerHTML = "Ended" + days "days ago";
-  }
   // If the count down is over, write some text 
-  //if (distance < 0) {
-    //clearInterval(x);
-    //document.getElementById("countdown").innerHTML = "EXPIRED";
-  //}
+  if (distance < 0) {
+    clearInterval(x);
+    document.getElementById("countdown").innerHTML = "EXPIRED";
+  }
 }, 1000);
 </script>
   </div>
