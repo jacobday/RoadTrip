@@ -24,7 +24,7 @@ body, html {height: 100%}
   <div class="w3-display-middle">
     <h1 class="w3-jumbo w3-animate-top">2019 Trip</h1>
     <hr class="w3-border-grey" style="margin:auto;width:40%">
-    <p class="w3-large w3-center" id="demo"></p>
+    <p class="w3-large w3-center" id="countdown"></p>
     <script>
 // Set the date we're counting down to
 var countDownDate = new Date("Apr 20, 2019").getTime();
@@ -42,13 +42,12 @@ var x = setInterval(function() {
   var days = Math.floor(distance / (1000 * 60 * 60 * 24));
     
   // Output the result in an element with id="demo"
-  document.getElementById("demo").innerHTML = days + "d " + hours + "h "
-  + minutes + "m " + seconds + "s ";
+  document.getElementById("countdown").innerHTML = days + " days left";
     
   // If the count down is over, write some text 
   if (distance < 0) {
     clearInterval(x);
-    document.getElementById("demo").innerHTML = "EXPIRED";
+    document.getElementById("countdown").innerHTML = "EXPIRED";
   }
 }, 1000);
 </script>
