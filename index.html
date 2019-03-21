@@ -42,9 +42,8 @@ var x = setInterval(function() {
   var days = Math.floor(distance / (1000 * 60 * 60 * 24));
     
   // Output the result in an element with id="demo"
-  if (distance < 0) {
   document.getElementById("countdown").innerHTML = days + " days left";
-  }
+    
   // If the count down is over, write some text 
   if (distance < 0) {
     clearInterval(x);
