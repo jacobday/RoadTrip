@@ -2,7 +2,7 @@ var allposts = [];
 function redirectToCorrectPage() {
   console.log("Unable to find page. Trying other URL cases.");
 	{% for post in site.pages %}  
-		allposts.push("{{ jacobday.github.io/RoadTrip }}");  
+		allposts.push("{{ https://jacobday.github.io/RoadTrip }}");  
 	{% endfor %}  
 	var url = window.location.pathname;
 	// strip trailing /
