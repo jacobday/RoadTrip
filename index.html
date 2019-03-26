@@ -68,9 +68,9 @@ var x = setInterval(function() {
     function showNextQuote() {
         ++quoteIndex;
         quotes.eq(quoteIndex % quotes.length)
-            .fadeIn(3000)
-            .delay(6000)
-            .fadeOut(3000, showNextQuote);
+            .fadeIn(2500)
+            .delay(5000)
+            .fadeOut(2500, showNextQuote);
     }
     
     showNextQuote();
