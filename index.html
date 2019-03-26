@@ -25,7 +25,8 @@ body, html {height: 100%}
     Great American Road Trip
   </div>
   <div class="w3-display-middle">
-    <h1 class="w3-jumbo w3-animate-top">2019 Trip</h1>
+    <h1 class="w3-jumbo w3-animate-top fade">2019 Trip</h1>
+    <h1 class="w3-jumbo w3-animate-top fade">April 18, 2019</h1>
     <hr class="w3-border-grey" style="margin:auto;width:40%">
     <p class="w3-large w3-center" id="countdown"></p>
     <p class="w3-center"><a class="fab fa-cc-paypal" style="font-size:2em;text-decoration:none;" href="https://paypal.me/jacobmday"></a></p>
@@ -55,6 +56,24 @@ var x = setInterval(function() {
   }
 }, 1000);
 </script>
+   <script>
+     (function() {
+
+    var quotes = $(".fade");
+    var quoteIndex = -1;
+    
+    function showNextQuote() {
+        ++quoteIndex;
+        quotes.eq(quoteIndex % quotes.length)
+            .fadeIn(2000)
+            .delay(5000)
+            .fadeOut(2000, showNextQuote);
+    }
+    
+    showNextQuote();
+    
+})();
+   </script>
   </div>
   <div class="w3-display-bottomleft w3-padding-large">
     Sponsored by <a href="https://jacobday.github.io/" target="_blank">Jacob Day</a> <i class="far fa-user-circle"></i>
