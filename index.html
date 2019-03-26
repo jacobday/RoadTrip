@@ -35,24 +35,6 @@ body, html {height: 100%}
     <p class="w3-large w3-center" id="countdown"></p>
     <p class="w3-center"><a class="fab fa-cc-paypal" style="font-size:2em;text-decoration:none;" href="https://paypal.me/jacobmday"></a></p>
     
-   <script>
-     (function() {
-
-    var quotes = $(".quotes");
-    var quoteIndex = -1;
-    
-    function showNextQuote() {
-        ++quoteIndex;
-        quotes.eq(quoteIndex % quotes.length)
-            .fadeIn(2500)
-            .delay(5000)
-            .fadeOut(2500, showNextQuote);
-    }
-    
-    showNextQuote();
-    
-})();
-   </script>
   </div>
   <div class="w3-display-bottomleft w3-padding-large">
     Sponsored by <a href="https://jacobday.github.io/" target="_blank">Jacob Day</a> <i class="far fa-user-circle"></i>
