@@ -1,5 +1,5 @@
 // Set the date we're counting down to
-  var countDownDate = new Date("Apr 18, 2020").getTime();
+  var countDownDate = new Date("Apr 18, 2019").getTime();
 
 // Update the count down every 1 second
   var x = setInterval(function() {
@@ -18,7 +18,6 @@
     
 // If the count down is over, write some text 
     if (distance < 0) {
-      clearInterval(x);
-      document.getElementById("countdown").innerHTML = "0 days left";
+      document.getElementById("countdown").innerHTML = '<i class="fas fa-exclamation-triangle" style="color:rgba(214, 69, 65, 0.9)"></i>' + " " + Math.abs(days) + " days ago";
     }
 }, 1000);
